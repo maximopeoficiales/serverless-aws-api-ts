@@ -1,6 +1,5 @@
-import * as express from "express";
-import { NextFunction, Request, Response } from "express";
-import * as serverless from "serverless-http";
+import express, { NextFunction, Request, Response } from "express";
+import serverless from "serverless-http";
 
 const app = express();
 

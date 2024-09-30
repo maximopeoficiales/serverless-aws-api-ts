@@ -7,14 +7,15 @@
     "serverless-http": "^3.2.0"
   },
   "scripts": {
-    "dev":"serverless offline start",
-    "deploy":"serverless deploy"
+    "build": "esbuild src/handler.ts --bundle --outfile=dist/handler.js --platform=node --target=node20",
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "esbuild": "^0.24.0",
     "serverless": "^4.4.3",
     "serverless-offline": "^14.3.2",
-    "serverless-plugin-typescript": "^2.1.5",
     "typescript": "^5.6.2"
   }
 }

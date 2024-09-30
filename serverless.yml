@@ -6,10 +6,14 @@ service: aws-example-api-ts
 provider:
   name: aws
   runtime: nodejs20.x
+
+# Habilita la opción de ESBuild
 build:
-  esbuild: false
+  esbuild:
+    bundle: true        # Genera un solo archivo
+    external: ["aws-sdk"] # Excluye aws-sdk para que no se incluya en el bundle
+
 plugins:
-  - serverless-plugin-typescript
   - serverless-offline
 
 functions:

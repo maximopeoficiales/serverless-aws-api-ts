@@ -4,11 +4,14 @@
     "strictNullChecks": true,
     "sourceMap": false,
     "allowJs": true,
-    "target": "es5",
+    "target": "es6", // Cambiado a es6
     "outDir": ".build",
     "moduleResolution": "node",
     "lib": ["es2015"],
     "rootDir": "src",
+    "module": "commonjs", // Asegúrate de que el módulo sea compatible
+    "esModuleInterop": true, // Habilitar esModuleInterop
+
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
